@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paritosh portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <li> <a href="#">Portfolio</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm
+                    <span>Paritosh Pandey
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------about----------------------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/about.jpeg">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me </h1>
+                    <p>"Hello! I'm Paritosh, a dedicated software engineer on a mission to build innovative solutions that make a difference. With a strong foundation in computer science and experience in developing web and  I love solving complex problems and turning ideas into functional, user-friendly software. I'm always eager to embrace new technologies and learn from every project. When I'm not immersed in code, you'll find me hiking in the great outdoors or playing my guitar. Let's connect and create something amazing together!"</p>
+                 <div class="tab-titles">
+                    <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Graphic Designer</span><br>Web Designing</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Video editor</span><br>Content video editing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <p>An upcoming Software Developer and a computer science aspirant.</p>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2020-current</span><br>Pursuing Btech in Computer Science</li>
+                        <li><span>2017-2019</span><br>Completed my Intermediate</li>
+                        <li><span>2015-2017</span><br>Completed My high school</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>

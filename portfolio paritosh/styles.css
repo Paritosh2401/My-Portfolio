@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #A7BEAE;
+    color: #201E20;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.logo {
+    padding: 0px 0px;
+    max-width: 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #201E20;
+    position: relative;
+}
+
+nav ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #B85042;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s linear;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 15%;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #B85042;
+
+}
+
+/*----------------------------------about------------------------------*/
+
+#about {
+    margin-left: 30px;
+    margin-right: 70px;
+    
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col1 {
+    flex-basis: 35%;
+}
+
+.about-col1 img {
+    width: 60%;
+    border-radius: 120px;
+    margin-left: 100px;
+}
+
+.about-col2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #201E20;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tab-links::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #B85042;
+    position: absolute;
+    
+    left: 40%;
+    
+    transition: 0.5s linear;
+}
+.tab-links.active-link::after{
+    width: 5%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #91372b;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
